@@ -1,0 +1,31 @@
+{
+    "name": "{{name}}",
+    "version": "1.0.0",
+    "dependencies": {{{json dependencies}}},
+    "main": "src/server.js",
+    "scripts": {
+        "start": "node src/server.js",
+        {{#if (includes features "docker")}}
+            "rebuild": "docker compose build --no-cache && docker compose up -d"
+        {{/if}}
+    },
+    "type": "module",
+    {{#if dynamicImports}}
+        "imports": {
+             "#utils/*": [
+                "./src/utils/*.js"
+            ],
+            "#constants/*": [
+                "./src/constants/*.js"
+            ],
+            "#routes/*": [
+                "./src/routes/*.js"
+            ],
+            {{#if (includes features "mongoose")}}
+                "#models/*": [
+                    "./src/models/*.js"
+                ],
+            {{/if}}
+        }
+    {{/if}}
+}

@@ -1,0 +1,6 @@
+{
+    "dependencies": {
+        "@fastify/oauth2": "^8.1.2"
+    },
+    "environmentVariables": ["START_OAUTH_PATH"]
+}

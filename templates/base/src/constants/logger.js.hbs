@@ -1,0 +1,16 @@
+export default {
+    {{#if (includes features "pino-pretty")}}
+        development: {
+            transport: {
+                target: "pino-pretty",
+                options: {
+                    translateTime: "HH:MM:ss Z",
+                    ignore: "pid,hostname",
+                },
+            },
+        },
+    {{else}}
+        development: true,
+    {{/if}}
+    production: true
+}

@@ -1,0 +1,33 @@
+{
+    "name": "fastify-create",
+    "version": "1.0.0",
+    "description": "",
+    "main": "cli.js",
+    "type": "module",
+    "license": "AGPL-version-3.0",
+    "engines": {
+        "node": ">= 14.0.0",
+        "npm": ">= 6.0.0"
+    },
+    "contributors": [],
+    "scripts": {
+        "dev": "",
+        "test": ""
+    },
+    "dependencies": {
+        "deepmerge": "^4.3.1",
+        "ejs": "^3.1.10",
+        "fs-extra": "^11.3.0",
+        "handlebars": "^4.7.8",
+        "js-beautify": "^1.15.4",
+        "picocolors": "^1.1.1",
+        "pretty-js": "^0.2.2",
+        "prompts": "^2.4.2"
+    },
+    "bin": {
+        "fastify-create": "cli.js"
+    },
+    "devDependencies": {
+        "prettier": "^3.6.2"
+    }
+}

@@ -1,0 +1,19 @@
+import fp from "fastify-plugin";
+import fastifySwaggerUi from "@fastify/swagger-ui";
+import fastifySwagger from "@fastify/swagger";
+
+export default fp(async function (fastify) {
+    await fastify.register(fastifySwagger, {
+        hideUntagged: true,
+        openapi: {
+            info: {
+                title: "{{name}}",
+                description: "{{name}} API Documentation",
+                version: "1.0.0",
+            },
+        },
+    });
+    await fastify.register(fastifySwaggerUi, {
+        routePrefix: "/documentation",
+    });
+});

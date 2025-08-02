@@ -1,0 +1,6 @@
+{
+    "dependencies": {
+        "mongoose": "^8.15.0"
+    },
+    "environmentVariables": ["MONGO_URI"]
+}

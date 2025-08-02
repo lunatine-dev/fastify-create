@@ -1,0 +1,6 @@
+{
+    "dependencies": {
+        "@fastify/jwt": "^9.1.0"
+    },
+    "environmentVariables": ["JWT_SECRET"]
+}
