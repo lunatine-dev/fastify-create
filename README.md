@@ -10,8 +10,9 @@ Script I made for myself to easily generate Fastify APIs as I found myself just 
 ## Run Locally
 
 ```bash
-    # npm
-    npx github:lunatine-dev/fastify-create
-    #pnpm
-    pnpm dlx github:lunatine-dev/fastify-create
+# npm
+npx github:lunatine-dev/fastify-create
+
+# pnpm
+pnpm dlx github:lunatine-dev/fastify-create
 ```
