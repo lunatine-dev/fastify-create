@@ -9,32 +9,9 @@ Script I made for myself to easily generate Fastify APIs as I found myself just 
 
 ## Run Locally
 
-Clone the project
-
 ```bash
-  git clone https://github.com/lunatine-dev/fastify-create
-```
-
-Go to the project directory
-
-```bash
-  cd fastify-create
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Link as global package
-
-```bash
-  npm link --global
-```
-
-Run package, follow prompts to create your fastify project in the CWD
-
-```
-fastify-create
+    # npm
+    npx github:lunatine-dev/fastify-create
+    #pnpm
+    pnpm dlx github:lunatine-dev/fastify-create
 ```
