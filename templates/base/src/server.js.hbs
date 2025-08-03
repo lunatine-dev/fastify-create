@@ -51,6 +51,9 @@ const init = async () => {
         {{/if}}
         
         await app.listen({
+            {{#if (includes features "docker")}}
+                host: "0.0.0.0",
+            {{/if}}
             port: process.env.PORT ?? 3000,
         });
     } catch (err) {
