@@ -6,7 +6,7 @@
     "scripts": {
         "start": "node src/server.js",
         {{#if (includes features "docker")}}
-            "rebuild": "docker compose build --no-cache && docker compose up -d"
+            "rebuild": "docker compose build --no-cache && docker compose up -d --remove-orphans",
         {{/if}}
     },
     "type": "module",
