@@ -42,7 +42,29 @@ const response = await prompts([
         type: "multiselect",
         name: "infrastructure",
         message: "Select infrastructure features:",
-        choices: [{ title: "Docker", value: "docker", selected: true }],
+        choices: [
+            { title: "Docker", value: "docker", selected: true },
+            { title: "Git", value: "git", selected: true },
+            {
+                title: "IDE: JetBrains",
+                value: "jetbrains",
+            },
+            {
+                title: "IDE: VS Code",
+                value: "vscode",
+            },
+        ],
+    },
+    {
+        type: (prev, values) =>
+            values.infrastructure.includes("jetbrains") ? "multiselect" : null,
+        name: "jetbrains",
+        message: "Select JetBrains project addons",
+        choices: [
+            { title: "Discord", value: "discord" },
+            { title: "Coding assistance", value: "coding", selected: true },
+            { title: "Prettier", value: "prettier" },
+        ],
     },
     {
         type: "text",
@@ -73,9 +95,16 @@ if (
     process.exit(1);
 }
 
-let { name, features, oauthProvider, envVars, dynamicImports, infrastructure } =
-    response;
-features = [...features, ...infrastructure];
+let {
+    name,
+    features,
+    oauthProvider,
+    envVars,
+    dynamicImports,
+    infrastructure,
+    jetbrains,
+} = response;
+features = [...features, ...infrastructure, ...jetbrains];
 
 // Parse envVars into array of trimmed strings
 const envVarList = envVars
