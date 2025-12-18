@@ -3,7 +3,8 @@
     <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "pnpm"
+    "nodejs_package_manager_path": "pnpm",
+    "settings.editor.selected.configurable": "settings.nodejs"
   }
 }]]></component>
 </project>

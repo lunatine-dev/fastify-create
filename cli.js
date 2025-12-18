@@ -44,7 +44,6 @@ const response = await prompts([
         message: "Select infrastructure features:",
         choices: [
             { title: "Docker", value: "docker", selected: true },
-            { title: "Git", value: "git", selected: true },
             {
                 title: "IDE: JetBrains",
                 value: "jetbrains",
