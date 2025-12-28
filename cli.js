@@ -100,8 +100,8 @@ let {
     oauthProvider,
     envVars,
     dynamicImports,
-    infrastructure,
-    jetbrains,
+    infrastructure = [],
+    jetbrains = [],
 } = response;
 features = [...features, ...infrastructure, ...jetbrains];
 
